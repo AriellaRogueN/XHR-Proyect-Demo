@@ -27,16 +27,24 @@ function handleError() {
 
 function addNews() {
     const data = JSON.parse(this.responseText);
-    //console.log(data);
+    console.log(data);
     //const response = data.response;
     //console.log(response);
-    const article = data.response.docs[0];
-    const title = article.headline.main;
-    const snippet = article.snippet;
+    const article = data.response.docs;
+    article.forEach(function(element) {
+    
+    const snippet = element.snippet;
 
     let li = document.createElement('li');
     li.className = 'articleCLass';
     li.innerText = snippet;
 
     responseContainer.appendChild(li);
+  });
+  
+  const image = article.multimedia[0].url;
+  const insertImg = document.createElement('img');
+  insertImg.setAttribute('src','https: //static01.nyt.com/' + image);
+  imagenes.appendChild(insertImg);
 }
+
