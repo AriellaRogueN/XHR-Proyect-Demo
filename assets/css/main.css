@@ -1,0 +1,36 @@
+body{
+    margin: 0;
+    padding:0;
+    background-color: lightgrey;
+}
+header{
+    text-align: center;
+}
+.site-container{
+    width:30%;
+    margin-left: 28.5em;
+}
+
+form{
+    background-color: blueviolet;
+    text-align: center;
+    height: 5em;
+}
+
+input{
+    margin-top: 2em;
+    width: 60%;
+    height:2em;
+}
+
+#submit-btn{
+    background-color: palevioletred;
+    width: 18%;
+    margin-left: 1em;
+}
+
+ ul li{
+    list-style: none;
+    font-size: 16px;
+}
+
